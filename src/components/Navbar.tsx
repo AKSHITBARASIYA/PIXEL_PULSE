@@ -31,10 +31,35 @@ const Navbar = () => {
     }`}>
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-18">
-          {/* Logo - Responsive sizing */}
+          {/* Logo - Responsive sizing with glass text effect on hover (text only, no background overlay) */}
           <div className="flex-shrink-0">
-            <span className="text-lg sm:text-xl md:text-2xl font-bold text-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer select-none">
-              ROBO<span className="text-white">FLUX</span>
+            <span className="group text-lg sm:text-xl md:text-2xl font-bold text-orange-500 hover:scale-105 transition-transform duration-200 cursor-pointer select-none relative">
+              <span className="relative z-10">
+                <span
+                  className="transition-all duration-300 group-hover:text-white group-hover:bg-clip-text group-hover:bg-gradient-to-br group-hover:from-black group-hover:to-orange-500 group-hover:drop-shadow-[0_2px_12px_rgba(255,255,255,0.95)] group-hover:brightness-200"
+                  style={{
+                    WebkitBackgroundClip: 'text',
+                    backgroundClip: 'text',
+                    WebkitTextFillColor: 'inherit',
+                    transition: 'color 0.3s, filter 0.3s',
+                    filter: 'none',
+                  }}
+                >
+                  ROBO
+                  <span
+                    className="text-white group-hover:text-orange-500 group-hover:bg-clip-text group-hover:bg-gradient-to-br group-hover:from-black group-hover:to-orange-500 group-hover:drop-shadow-[0_2px_12px_rgba(255,255,255,0.95)] group-hover:brightness-200"
+                    style={{
+                      WebkitBackgroundClip: 'text',
+                      backgroundClip: 'text',
+                      WebkitTextFillColor: 'inherit',
+                      transition: 'color 0.3s, filter 0.3s',
+                      filter: 'none',
+                    }}
+                  >
+                    FLUX
+                  </span>
+                </span>
+              </span>
             </span>
           </div>
           
